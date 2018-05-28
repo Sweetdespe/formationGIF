@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CV';
-  Nom = 'Régis';
-  Prenom = 'Lévêque';
-  Sexe = 'Masculin';
-  Emploi = 'Développeur';
-  Age = 35 ;
+  title = 'app';
 }
