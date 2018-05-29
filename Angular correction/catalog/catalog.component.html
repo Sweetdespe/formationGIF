@@ -1,0 +1,10 @@
+<div class="catalog">
+  
+  <div class="product" *ngFor="let current of catalog">
+    <h2>{{current.title}}</h2>
+    <img src="{{current.url}}" />
+    <p>Prix: {{current.price}}€</p>
+  </div>
+
+  
+</div>
