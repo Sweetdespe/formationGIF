@@ -1,6 +1,0 @@
-Créer une application angular possédant les composants suivants: 
-
-- HeaderComponent -> doit contenir le titre de l'application
-- MenuComponent -> doit contenir un début de menu
-- CatalogComponent -> doit contenir une liste de produits ( créez-en des faux pour commencer )
-- FooterComponent -> doit contenir le pied de page de l'application ( liens "mentions légales", "à propos" etc ... )
