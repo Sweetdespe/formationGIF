@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Product, PRODUCT_MOCK} from '../bean/product';
+import {Product} from '../bean/product';
 import { ProductService } from '../service/product.service';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-catalog',
@@ -13,37 +14,35 @@ export class CatalogComponent implements OnInit {
   public nom:string;
   public prix:number;
   private service:ProductService;
+  private myCartService:CartService;
 
-  constructor( p_service:ProductService ) {
+  constructor( 
+    p_service:ProductService, 
+    p_service2:CartService
+  ) {
     
-    this.nom      = "";
-    this.prix     = 1000;
-    this.service  = p_service;
-    this.catalog  = p_service.getProducts();
-  }
-
-  public hideProduct( p_product:Product ):void{
-
-    const tmp:Array<Product> = new Array<Product>();
-    let i:number = 0;
-    let max:number = this.catalog.length;
-
-    for( i = 0; i < max; i++ )
-    {
-      if( this.catalog[i] == p_product )
-        continue;
-      
-      tmp.push(this.catalog[i]);
-    }
-    
-    this.catalog = tmp;
+    this.nom            = "";
+    this.prix           = 100;
+    this.service        = p_service;
+    this.myCartService  = p_service2;
+    this.catalog        = new Array<Product>();
   }
 
   public addToCart(p_product:Product):void{
-    alert(p_product.title+" a été ajouté au panier !");
+    
+    // alert(p_product.title+" a été ajouté au panier !");
+
+    this.myCartService.addToCart(p_product);
   }
 
-  ngOnInit() {
+  public ngOnInit():void {
+    this.service.getProducts().then(
+
+      (products:Array<Product>) => {
+        this.catalog = products;
+      }
+      
+    );
   }
 
 }

@@ -1,0 +1,8 @@
+<div class="cart">
+  <div class="product" *ngFor="let data of cart">
+    <h2>{{data.title}}</h2>
+    <img src="{{data.url}}" />
+    <p>Prix: {{data.price}}€</p>
+    <button (click)="remove(data)">X</button>
+  </div>
+</div>

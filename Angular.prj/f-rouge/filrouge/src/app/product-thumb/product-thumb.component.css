@@ -7,3 +7,9 @@ img{
     width: 100%;
     height: auto;
 }
+
+button{
+    align-self: center;
+    width: 30%;
+    height: auto;
+}

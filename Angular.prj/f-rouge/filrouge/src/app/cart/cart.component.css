@@ -1,0 +1,26 @@
+.cart{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+}
+
+.product h2{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product img{
+    width: 100%;
+    height: auto;
+}
+
+button{
+    align-self: center;
+    width: 30%;
+    height: auto;
+}
