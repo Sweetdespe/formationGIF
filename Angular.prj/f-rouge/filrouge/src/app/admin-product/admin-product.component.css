@@ -1,0 +1,15 @@
+label {
+    width:80px;
+    display: inline-block;
+  }
+  
+input {
+  width:130px;
+  display: inline-block;
+}
+
+p {
+    width:180px;
+    display: inline-block;
+    text-align: end;
+}

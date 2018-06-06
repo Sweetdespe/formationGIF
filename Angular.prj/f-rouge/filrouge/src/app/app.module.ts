@@ -17,6 +17,7 @@ import { HomeComponent }  from './home/home.component';
 import { ProductService } from './service/product.service';
 import { CartService }    from './service/cart.service';
 import { CartComponent }  from './cart/cart.component';
+import { AdminProductComponent } from './admin-product/admin-product.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CartComponent }  from './cart/cart.component';
     AlphaPipe,
     PricePipe,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    AdminProductComponent
   ],
   imports: [
     BrowserModule, 
@@ -51,6 +53,11 @@ import { CartComponent }  from './cart/cart.component';
           path: "cart", 
           component: CartComponent, 
           pathMatch: 'full'
+        }, 
+        {
+          path: "admin/catalog", 
+          component: AdminProductComponent, 
+          pathMatch: 'full'
         }
       ], 
       {
@@ -58,7 +65,7 @@ import { CartComponent }  from './cart/cart.component';
       }
     )
   ],
-  providers: [ProductService],
+  providers: [ProductService, CartService],
   bootstrap: [
     AppComponent
   ]

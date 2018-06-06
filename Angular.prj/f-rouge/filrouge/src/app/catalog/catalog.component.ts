@@ -42,6 +42,10 @@ export class CatalogComponent implements OnInit {
         this.catalog = products;
       }
       
+    ).catch(
+      (error:any) => {
+        console.log(error);
+      }
     );
   }
 
