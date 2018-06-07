@@ -1,0 +1,7 @@
+MYSQL
+AUTOINCREMENTATION commence toujours a 1
+-------
+getion de base de données : 
++ d'ecriture : privilegier l'insertion dans une base de données.
++ de lecture : privilegier la lecture.
+

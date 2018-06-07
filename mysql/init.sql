@@ -7,15 +7,15 @@ DROP TABLE IF EXISTS `famous_pyrates`;
 
 CREATE TABLE IF NOT EXISTS `famous_pyrates`(
 
-	id 		TINYINT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	name 	VARCHAR(50) UNIQUE NOT NULL DEFAULT "no_name",
-	surname VARCHAR(50) NOT NULL DEFAULT "no_surname",
-	nickname VARCHAR(50) NOT NULL DEFAULT "no_nickname",
-	birth_place VARCHAR(50) NOT NULL DEFAULT 'no_city',
-	death_place VARCHAR(50) NOT NULL DEFAULT 'no_city',
-	birth_date DATE NOT NULL DEFAULT '0000-00-00',
-	death_date DATE NOT NULL DEFAULT '0000-00-00',
-	sex ENUM("F","M") NOT NULL DEFAULT "F"
+	id 			TINYINT 	PRIMARY KEY AUTO_INCREMENT 	NOT NULL,
+	name 		VARCHAR(50) UNIQUE 						NOT NULL DEFAULT "no_name",
+	surname 	VARCHAR(50) 							NOT NULL DEFAULT "no_surname",
+	nickname 	VARCHAR(50) 							NOT NULL DEFAULT "no_nickname",
+	birth_place VARCHAR(50) 							NOT NULL DEFAULT 'no_city',
+	death_place VARCHAR(50) 							NOT NULL DEFAULT 'no_city',
+	birth_date 	DATE 									NOT NULL DEFAULT '0000-00-00',
+	death_date 	DATE									NOT NULL DEFAULT '0000-00-00',
+	sex ENUM("F","M") 									NOT NULL DEFAULT "F"
 );
 
 CREATE TABLE IF NOT EXISTS `ships`(
