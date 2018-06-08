@@ -11,9 +11,14 @@ export class PricePipe implements PipeTransform {
     let i:number = 0;
     let max:number = value.length;
     let results:Array<Product> = new Array<Product>();
+    let a:number = 0;
+    let b:number = 0;
 
     for( i = 0; i < max; i++ ){
-      if( value[i].price <= p_price ){
+      a = parseFloat(value[i].price.toString());
+      b = parseFloat(p_price.toString());
+
+      if( a <= b ){
         results.push(value[i]);
       }
     }
